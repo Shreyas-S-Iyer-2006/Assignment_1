@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+            body {
+        width: 35%;
+        border: 5px solid black;
+        border-radius: 20px;
+        padding: 5%;
+        margin-top: 30px;
+        margin-left: 25%;
+        }
+        </style>
+    </head>
+    <body>
+        <div> 
+            <h1> Shreyas S Iyer </h1>
+            <img src="d:\sushr\Pictures\Saved Pictures\ghibli profile.jpg"
+           style="
+           height: 200px;
+           width: 200px;
+           border-radius: 50%;
+           ">
+           <br>
+           <p>Hi! I am Shreyas, an Aerospace engineering undergraduate student at IIT Kanpur. I am from Bengaluru, Karnataka.</p>
+           some of my hobbies are :-
+           <ul>
+            <li>Music</li>
+            <li>Badminton</li>
+            <li>Aeromodellng</li>
+           </ul>
+           <section>
+            <h2>Projects</h2>
+            Some projects that I've been a part of are 
+            <ol> 
+                <li>ACA253 - developing a website from scratch</li>
+                <li>ML kickstart - basics of machine learinng</li>
+                <li>Flying wing - building and flying a tail-less aircraft model</li>
+            </ol>
+           </section>
+           <section>
+            <h3>Contact</h3>
+            Email: shreyas.iyer2006@gmail.com <br>
+            LinkedIn: <a href="https://www.linkedin.com/in/shreyas-s-iyer-154705324/">https://www.linkedin.com/in/shreyas-s-iyer-154705324/</a>
+           </section>
+           <section>
+            <h3>Skills and courses</h3>
+            <ul id="skills" style="margin-bottom: 0%;">
+                <li>Basics of C programming</li>
+                <li>Quantum physics</li>
+                <li>Linear algebra</li>
+            <div id="more" 
+            style="display: none; margin-top: 0%;"
+            >
+                <li>Differential equations</li>
+                <li>Web development</li>
+                </div>
+            </ul>
+            <button onclick="Readmore()" id="btn">Read more</button>
+            <button onclick="editlist()" id="editbtn">Edit</button>
+            <button style="display: none;" onclick="savelist()" id="savebtn">save</button>
+           </section>
+
+           <script>
+            function Readmore() {
+                let more = document.getElementById("more");
+                let btntxt = document.getElementById("btn");
+
+                if(more.style.display=="none"){
+                    more.style.display = "block";
+                    btntxt.innerHTML = "Read less";
+                } 
+                else{
+                    more.style.display = "none";
+                    btntxt.innerHTML = "Read more";
+                }
+            }
+
+            function editlist(){
+                document.getElementById("skills").contentEditable = true;
+                editbtn.style.display = "none";
+                savebtn.style.display = "block";
+
+            }
+
+            function savelist(){
+                document.getElementById("skills").contentEditable = false;
+                editbtn.style.display = "block";
+                savebtn.style.display = "none";
+            }
+
+           </script>
+        </div>
+    </body>
+</html>
